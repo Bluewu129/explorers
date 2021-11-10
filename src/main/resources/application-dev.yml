@@ -1,0 +1,5 @@
+server:
+  servlet:
+    context-path: /v1     # 应用路径，可以通过设置路径来控制版本
+  tomcat:
+    uri-encoding: UTF-8

@@ -1,0 +1,4 @@
+# 开发
+spring.profiles.active: dev
+# 生产
+#spring.profiles.active: prod
