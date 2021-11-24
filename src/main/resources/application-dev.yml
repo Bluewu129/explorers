@@ -1,5 +1,12 @@
 server:
   servlet:
-    context-path: /v1     # 应用路径，可以通过设置路径来控制版本
+    context-path: /     # 应用路径，可以通过设置路径来控制版本
   tomcat:
     uri-encoding: UTF-8
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/sys?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
