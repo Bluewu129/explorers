@@ -1,6 +1,7 @@
 package com.explorers.auth.filter;
 
 import com.explorers.auth.exception.TokenIsExpiredException;
+import com.explorers.model.base.ResponseResult;
 import com.explorers.utils.JwtTokenUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
@@ -46,8 +47,9 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
       response.setContentType("application/json; charset=utf-8");
       //返回json形式的错误信息
       response.setStatus(HttpServletResponse.SC_FORBIDDEN);
-      String reason = "访问URL: " + request.getRequestURI() + ",认证失败";
-      response.getWriter().write(new ObjectMapper().writeValueAsString(reason));
+      String reason = "认证失败, 访问URL: " + request.getRequestURI();
+      response.getWriter().write(new ObjectMapper().writeValueAsString(
+          ResponseResult.systemError("Authentication failed", reason)));
       response.getWriter().flush();
       return;
     }

@@ -17,7 +17,7 @@ public class JwtTokenUtils {
   public static final String TOKEN_HEADER = "Authorization";
   public static final String TOKEN_PREFIX = "Bearer ";
 
-  private static final String SECRET = "jwtsecretdemo";
+  private static final String SECRET = "jwtsecret";
   private static final String ISS = "bluewu";
 
   /**
