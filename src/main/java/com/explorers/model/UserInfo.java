@@ -9,7 +9,7 @@ import lombok.Data;
 /**
  * @author wugaobo
  */
-@TableName("sys_user")
+@TableName("explorers_user_info")
 @Data
 public class UserInfo {
 
@@ -25,6 +25,6 @@ public class UserInfo {
   @TableField(exist = false)
   private String role = "ROLE_ADMIN";
 
-  @TableField(exist = false)
+  @TableField(value = "rememberme")
   private Integer rememberMe;
 }

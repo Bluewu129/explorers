@@ -17,6 +17,6 @@ public interface UserMapper extends BaseMapper<UserInfo> {
    * @param userName
    * @return
    */
-  @Select("select id,user_name,password from sys_user where user_name = #{userName}")
+  @Select("select id,user_name,password from explorers_user_info where user_name = #{userName}")
   UserInfo findByUserName(String userName);
 }
